@@ -10,6 +10,7 @@ using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.DataVisualization.Charting;
 
 namespace RSA
 {
@@ -254,6 +255,24 @@ namespace RSA
         {
             this.textBox_p2.Text = File.ReadLines("in.txt").Skip(0).First();
             this.textBox_q2.Text = File.ReadLines("in.txt").Skip(1).First();
+        }
+
+        private void textBox_p_TextChanged(object sender, EventArgs e)
+        {
+            this.chart1.Series.Clear();
+            this.chart1.Series.Add("TextBox");
+            this.chart1.Series[0].ChartType = SeriesChartType.Line;
+            this.chart1.Series[0].Color = Color.Red;
+            double[] data=this.textBox_p2.Text.Split(",".ToArray(),StringSplitOptions.RemoveEmptyEntries).Select(x=>double.Parse(x)).ToArray();
+            double[] data2 = this.textBox_q2.Text.Split(",".ToArray(), StringSplitOptions.RemoveEmptyEntries).Select(x => double.Parse(x)).ToArray();
+            foreach(double s in data)
+            {
+                this.chart1.Series[0].Points.AddY(s);
+            }
+            foreach (double s in data2)
+            {
+                this.chart1.Series[0].Points.AddY(s);
+            }
         }
     }
 }
