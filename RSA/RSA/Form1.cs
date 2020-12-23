@@ -291,5 +291,12 @@ namespace RSA
                 this.chart1.Series[0].Points.AddY(s);
             }
         }
+
+        private void textBox_p_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (Char.IsNumber(e.KeyChar) | (e.KeyChar == Convert.ToChar(",")) | e.KeyChar == '\b') return;
+            else
+                e.Handled = true;
+        }
     }
 }

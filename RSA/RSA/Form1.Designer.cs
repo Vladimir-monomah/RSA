@@ -63,6 +63,7 @@
             this.textBox_n.Size = new System.Drawing.Size(81, 30);
             this.textBox_n.TabIndex = 24;
             this.textBox_n.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.textBox_n.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_p_KeyPress);
             // 
             // textBox_d
             // 
@@ -73,6 +74,7 @@
             this.textBox_d.Size = new System.Drawing.Size(81, 30);
             this.textBox_d.TabIndex = 23;
             this.textBox_d.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.textBox_d.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_p_KeyPress);
             // 
             // label6
             // 
@@ -128,6 +130,7 @@
             this.textBox_q.TabIndex = 18;
             this.textBox_q.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.textBox_q.TextChanged += new System.EventHandler(this.textBox_p_TextChanged);
+            this.textBox_q.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_p_KeyPress);
             // 
             // label2
             // 
@@ -150,6 +153,7 @@
             this.textBox_p.TabIndex = 16;
             this.textBox_p.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.textBox_p.TextChanged += new System.EventHandler(this.textBox_p_TextChanged);
+            this.textBox_p.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_p_KeyPress);
             // 
             // label1
             // 
@@ -192,10 +196,12 @@
             this.textBox_q2.Location = new System.Drawing.Point(264, 128);
             this.textBox_q2.Margin = new System.Windows.Forms.Padding(4);
             this.textBox_q2.Name = "textBox_q2";
+            this.textBox_q2.ReadOnly = true;
             this.textBox_q2.Size = new System.Drawing.Size(81, 30);
             this.textBox_q2.TabIndex = 28;
             this.textBox_q2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.textBox_q2.TextChanged += new System.EventHandler(this.textBox_p_TextChanged);
+            this.textBox_q2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_p_KeyPress);
             // 
             // label7
             // 
@@ -214,10 +220,12 @@
             this.textBox_p2.Location = new System.Drawing.Point(115, 128);
             this.textBox_p2.Margin = new System.Windows.Forms.Padding(4);
             this.textBox_p2.Name = "textBox_p2";
+            this.textBox_p2.ReadOnly = true;
             this.textBox_p2.Size = new System.Drawing.Size(81, 30);
             this.textBox_p2.TabIndex = 26;
             this.textBox_p2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.textBox_p2.TextChanged += new System.EventHandler(this.textBox_p_TextChanged);
+            this.textBox_p2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_p_KeyPress);
             // 
             // label8
             // 
@@ -257,7 +265,7 @@
             series1.ChartArea = "ChartArea1";
             series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
             series1.Legend = "Legend1";
-            series1.Name = "Series1";
+            series1.Name = "Graph";
             this.chart1.Series.Add(series1);
             this.chart1.Size = new System.Drawing.Size(468, 501);
             this.chart1.TabIndex = 30;
