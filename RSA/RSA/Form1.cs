@@ -257,6 +257,11 @@ namespace RSA
             this.textBox_q2.Text = File.ReadLines("in.txt").Skip(1).First();
         }
 
+        /// <summary>
+        /// Построение графика
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void textBox_p_TextChanged(object sender, EventArgs e)
         {
             this.chart1.Series.Clear();
