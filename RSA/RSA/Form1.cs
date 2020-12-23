@@ -231,13 +231,29 @@ namespace RSA
                 var n_ = new BigInteger((int)n);
 
                 bi = bi % n_;
-
+                 
                 int index = Convert.ToInt32(bi.ToString());
 
-                result += characters[index].ToString();
+                result += this.characters[index].ToString();
             }
 
             return result;
+        }
+
+        private void btnFile_Click(object sender, EventArgs e)
+        {
+            var o = new OpenFileDialog();
+            o.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*";
+            if (o.ShowDialog() == DialogResult.OK)
+            {
+                this.Ext();
+            }
+        }
+
+        private void Ext()
+        {
+            this.textBox_p2.Text = File.ReadLines("in.txt").Skip(0).First();
+            this.textBox_q2.Text = File.ReadLines("in.txt").Skip(1).First();
         }
     }
 }

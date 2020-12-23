@@ -45,7 +45,8 @@
             this.label7 = new System.Windows.Forms.Label();
             this.textBox_p2 = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnFile = new System.Windows.Forms.Button();
+            this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.SuspendLayout();
             // 
             // textBox_n
@@ -220,23 +221,28 @@
             this.label8.TabIndex = 25;
             this.label8.Text = "p =";
             // 
-            // button1
+            // btnFile
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.button1.Location = new System.Drawing.Point(69, 184);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(291, 41);
-            this.button1.TabIndex = 29;
-            this.button1.Text = "Вставить из файла";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnFile.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btnFile.Location = new System.Drawing.Point(69, 184);
+            this.btnFile.Margin = new System.Windows.Forms.Padding(4);
+            this.btnFile.Name = "btnFile";
+            this.btnFile.Size = new System.Drawing.Size(291, 41);
+            this.btnFile.TabIndex = 29;
+            this.btnFile.Text = "Вставить из файла";
+            this.btnFile.UseVisualStyleBackColor = true;
+            this.btnFile.Click += new System.EventHandler(this.btnFile_Click);
+            // 
+            // openFileDialog
+            // 
+            this.openFileDialog.FileName = "openFileDialog1";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(439, 525);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(847, 525);
+            this.Controls.Add(this.btnFile);
             this.Controls.Add(this.textBox_q2);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.textBox_p2);
@@ -283,7 +289,8 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox textBox_p2;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnFile;
+        private System.Windows.Forms.OpenFileDialog openFileDialog;
     }
 }
 
