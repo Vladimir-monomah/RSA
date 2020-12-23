@@ -272,11 +272,21 @@ namespace RSA
             this.chart1.Series[0].Color = Color.Red;
             double[] data=this.textBox_p2.Text.Split(",".ToArray(),StringSplitOptions.RemoveEmptyEntries).Select(x=>double.Parse(x)).ToArray();
             double[] data2 = this.textBox_q2.Text.Split(",".ToArray(), StringSplitOptions.RemoveEmptyEntries).Select(x => double.Parse(x)).ToArray();
-            foreach(double s in data)
+            double[] data3 = this.textBox_p.Text.Split(",".ToArray(), StringSplitOptions.RemoveEmptyEntries).Select(x => double.Parse(x)).ToArray();
+            double[] data4 = this.textBox_q.Text.Split(",".ToArray(), StringSplitOptions.RemoveEmptyEntries).Select(x => double.Parse(x)).ToArray();
+            foreach (double s in data)
             {
                 this.chart1.Series[0].Points.AddY(s);
             }
             foreach (double s in data2)
+            {
+                this.chart1.Series[0].Points.AddY(s);
+            }
+            foreach (double s in data3)
+            {
+                this.chart1.Series[0].Points.AddY(s);
+            }
+            foreach (double s in data4)
             {
                 this.chart1.Series[0].Points.AddY(s);
             }
