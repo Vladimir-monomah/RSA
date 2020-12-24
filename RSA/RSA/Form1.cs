@@ -35,8 +35,8 @@ namespace RSA
             {
                 long p = Convert.ToInt64(this.textBox_p.Text);
                 long q = Convert.ToInt64(this.textBox_q.Text);
-                long p2 = long.Parse(this.textBox_p2.Text);
-                long q2 = long.Parse(this.textBox_q2.Text);
+                long p2 = Convert.ToInt64(this.textBox_p2.Text);
+                long q2 = Convert.ToInt64(this.textBox_q2.Text);
 
                 if (this.IsTheNumberSimple(p) && this.IsTheNumberSimple(q)
                     && this.IsTheNumberSimple(p2) && this.IsTheNumberSimple(q2))
