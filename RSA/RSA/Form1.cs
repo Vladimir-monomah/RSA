@@ -35,8 +35,8 @@ namespace RSA
             {
                 long p = Convert.ToInt64(this.textBox_p.Text);
                 long q = Convert.ToInt64(this.textBox_q.Text);
-                long p2 = Convert.ToInt64(this.textBox_p2.Text);
-                long q2 = Convert.ToInt64(this.textBox_q2.Text);
+                long p2 = long.Parse(this.textBox_p2.Text);
+                long q2 = long.Parse(this.textBox_q2.Text);
 
                 if (this.IsTheNumberSimple(p) && this.IsTheNumberSimple(q)
                     && this.IsTheNumberSimple(p2) && this.IsTheNumberSimple(q2))
@@ -270,18 +270,18 @@ namespace RSA
             this.chart1.Series.Add("TextBox");
             this.chart1.Series[0].ChartType = SeriesChartType.Line;
             this.chart1.Series[0].Color = Color.Red;
-            double[] data=this.textBox_p2.Text.Split(",".ToArray(),StringSplitOptions.RemoveEmptyEntries).Select(x=>double.Parse(x)).ToArray();
-            double[] data2 = this.textBox_q2.Text.Split(",".ToArray(), StringSplitOptions.RemoveEmptyEntries).Select(x => double.Parse(x)).ToArray();
+            //double[] data=this.textBox_p2.Text.Split(",".ToArray(),StringSplitOptions.RemoveEmptyEntries).Select(x=>double.Parse(x)).ToArray();
+            //double[] data2 = this.textBox_q2.Text.Split(",".ToArray(), StringSplitOptions.RemoveEmptyEntries).Select(x => double.Parse(x)).ToArray();
             double[] data3 = this.textBox_p.Text.Split(",".ToArray(), StringSplitOptions.RemoveEmptyEntries).Select(x => double.Parse(x)).ToArray();
             double[] data4 = this.textBox_q.Text.Split(",".ToArray(), StringSplitOptions.RemoveEmptyEntries).Select(x => double.Parse(x)).ToArray();
-            foreach (double s in data)
-            {
-                this.chart1.Series[0].Points.AddY(s);
-            }
-            foreach (double s in data2)
-            {
-                this.chart1.Series[0].Points.AddY(s);
-            }
+            //foreach (double s in data)
+            //{
+            //    this.chart1.Series[0].Points.AddY(s);
+            //}
+            //foreach (double s in data2)
+            //{
+            //    this.chart1.Series[0].Points.AddY(s);
+            //}
             foreach (double s in data3)
             {
                 this.chart1.Series[0].Points.AddY(s);
